@@ -63,20 +63,6 @@ def show_roc_hot(matriz_confusion):
     plt.show()
 
 
-def show_roc_curve_matrix(model, x_test, y_test):
-    colors = ['orange', 'blue', 'yellow', 'green', 'red', 'silver']
-    # show plot ROC
-    for i in range(len(model)):
-        fpr, tpr = fpr_tpr(model[i], x_test, y_test)
-        # sns.heatmap(matriz_confusion)
-        # plt.show()
-        plt.plot(fpr, tpr, color=colors[i], label='ROC')
-    plt.xlabel('False Positive Rate')
-    plt.ylabel('True Positive Rate')
-    plt.plot([0, 1], [0, 1], color='darkblue', linestyle='--')
-    plt.title('Receiver Operating Characteristic (ROC) Curve')
-    plt.legend(model_name + ['line'])
-    plt.show()
 
 
 def sh_me(str_model, AUC, acc_validation, acc_test, y_test, y_pred):
