@@ -157,6 +157,8 @@ y = np.array(data.RainTomorrow)  # 0 no llovera, 1 llovera
 x_tr, x_te, y_tr, y_te = train_test_split(x, y, test_size=0.2)
 
 # metricas
+
+
 model_name = ['LOGISTIC REGRESSION', 'DECISION TREE', 'KNEIGHBORNS',
               'RANDOM FOREST CLASSIFIER', 'GRADIENT BOOSTING CLASSIFIER']
 
